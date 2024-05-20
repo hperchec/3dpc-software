@@ -1,0 +1,10 @@
+[Unit]
+Description=Init GPIO ports
+After=pigpiod.target
+ 
+[Service]
+ 
+ExecStart=/home/admin/scripts/custom/init-gpio
+ 
+[Install]
+WantedBy=multi-user.target
