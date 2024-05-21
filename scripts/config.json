@@ -1,0 +1,46 @@
+{
+    "fans": [
+        {
+            "name": "FAN 1",
+            "pwm": {
+                "pin": 12,
+                "frequency": 25000,
+                "defaultDutyCycle": 100000
+            }
+        },
+        {
+            "name": "FAN 2",
+            "pwm": {
+                "pin": 13,
+                "frequency": 25000,
+                "defaultDutyCycle": 100000
+            }
+        }
+    ],
+    "relays": [
+        {
+            "name": "RELAY 1",
+            "target": "fans:FAN 1",
+            "pin": 18,
+            "defaultState": 1
+        },
+        {
+            "name": "RELAY 2",
+            "target": "fans:FAN 2",
+            "pin": 23,
+            "defaultState": 0
+        }
+    ],
+    "pushButtons": [
+        {
+            "name": "PUSH BUTTON 1",
+            "target": "relays:RELAY 1",
+            "pin": 17
+        },
+        {
+            "name": "PUSH BUTTON 2",
+            "target": "relays:RELAY 2",
+            "pin": 27
+        }
+    ]
+}

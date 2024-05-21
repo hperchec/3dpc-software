@@ -71,8 +71,17 @@ cd ~/3dpc-software
 git clone https://github.com/hperchec/3dpc-software.git
 ```
 
-## Copy the .env file
+## Create symbolic link for service
 
+```bash
+sudo ln -s ~/3dpc-software/service/3dpc.service /etc/systemd/system/3dpc.service
+```
+
+## Enable the service
+
+```bash
+systemctl enable 3dpc.service
+```
 
 ## Enable hardware PWM
 

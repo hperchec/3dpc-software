@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# --------------------------------------------------------------
+# Start 3DPC service script
+# @author Hervé Perchec <herve.perchec@gmail.com>
+# --------------------------------------------------------------
+
+# Get entire path of the script directory
+SCRIPT_DIR=$(dirname "${BASH_SOURCE[0]}")
+cd $SCRIPT_DIR
+SCRIPT_DIR=$PWD
+
+set -a
+
+# Get environment variables from .env file in parent directory
+# source ../../.env
+
+set +a
+
+python3 main.py
+
+exit 0

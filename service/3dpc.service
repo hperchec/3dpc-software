@@ -1,0 +1,10 @@
+[Unit]
+Description=3D Printer Case service
+After=pigpiod.target
+ 
+[Service]
+ 
+ExecStart=/home/admin/3dpc-software/scripts/start
+ 
+[Install]
+WantedBy=multi-user.target
