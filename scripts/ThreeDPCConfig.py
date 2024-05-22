@@ -12,6 +12,7 @@ class ThreeDPCConfig:
         # Closing file
         configFile.close()
         # Assign properties
+        self.system = config['system']
         self.fans = config['fans']
         self.relays = config['relays']
         self.pushButtons = config['pushButtons']

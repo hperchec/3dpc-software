@@ -1,4 +1,9 @@
 {
+    "system": {
+        "socket": {
+            "port": 10000
+        }
+    },
     "fans": [
         {
             "name": "FAN 1",
@@ -22,7 +27,7 @@
             "name": "RELAY 1",
             "target": "fans:FAN 1",
             "pin": 18,
-            "defaultState": 1
+            "defaultState": 0
         },
         {
             "name": "RELAY 2",

@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# --------------------------------------------------------------
+# Send command to running 3DPC service
+# @author Hervé Perchec <herve.perchec@gmail.com>
+# --------------------------------------------------------------
+
+# Get entire path of the script directory
+SCRIPT_DIR=$(dirname "${BASH_SOURCE[0]}")
+cd $SCRIPT_DIR
+SCRIPT_DIR=$PWD
+
+set -a
+
+# Get environment variables from .env file in parent directory
+# source ../../.env
+
+set +a
+
+python3 remote.py "${@:1}"
+
+exit 0
